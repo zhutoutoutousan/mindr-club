@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Globe, Lock, Sparkles, Users, TrendingUp, Calendar, Shield, Zap } from "lucide-react"
+import { Globe, Lock, Sparkles, Users, TrendingUp, Calendar, Shield, Zap, Bitcoin, Network, Globe2, Rocket } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -18,7 +18,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-white" />
+                <Users className="w-5 h-5 text-white" />
               </div>
               <span className="text-2xl font-bold text-white">mindr.club</span>
             </div>
@@ -27,7 +27,7 @@ export default function HomePage() {
                 Sign In
               </Button>
               <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
-                Get Started
+                Join the Network
               </Button>
             </div>
           </div>
@@ -38,20 +38,127 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-purple-500/20 text-purple-200 border-purple-500/30">
-            The Future of Startup Collaboration
+            Founder Matching Network
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Welcome to the
+            Connect with
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               {" "}
-              Metaverse{" "}
+              Visionary{" "}
             </span>
-            for Founders
+            Founders
           </h1>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Connect, collaborate, and scale your startup in our AI-powered ecosystem. From partner matching to lifecycle
-            management, everything you need in one place.
+            Join a network of ambitious founders, entrepreneurs, and innovators. Find your perfect co-founder, build your dream team, and create the future together.
           </p>
+
+          {/* Add merit-based entry section */}
+          <div className="max-w-4xl mx-auto mb-12 bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
+            <h2 className="text-2xl font-bold text-white mb-4">Merit-Based Network</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-purple-400 mb-3">What We Value</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    <span>Open Source Contributions</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    <span>Technical Skills & Projects</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    <span>Startup Experience</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    <span>Domain Knowledge</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-pink-400 mb-3">No Traditional Barriers</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span>No Degree Required</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span>No Corporate Titles Needed</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span>No Minimum Capital</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span>Skills-Based Certification</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Vision Cards */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">Smart Matching</h3>
+              <p className="text-gray-300">AI-powered founder matching based on skills, vision, and complementary strengths.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">Global Network</h3>
+              <p className="text-gray-300">Connect with founders worldwide, from Silicon Valley to emerging tech hubs.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">Market Context</h3>
+              <p className="text-gray-300">Stay informed about market trends and emerging technologies while building your network.</p>
+            </div>
+          </div>
+
+          {/* Add new features section */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">Private Hosting</h3>
+              <p className="text-gray-300">Deploy your own instance with complete data sovereignty and independent operation.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">Decentralized Network</h3>
+              <p className="text-gray-300">Connect to the global network voluntarily with differential privacy protocols.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">Data Control</h3>
+              <p className="text-gray-300">Maintain full control over your data while benefiting from network effects.</p>
+            </div>
+          </div>
+
+          {/* Add startup agent features */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">AI-Powered Analysis</h3>
+              <p className="text-gray-300">Advanced market analysis and opportunity detection powered by AI agents.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">Strategy Automation</h3>
+              <p className="text-gray-300">Automated trading strategies and portfolio management with customizable parameters.</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">Expert Validation</h3>
+              <p className="text-gray-300">AI-driven expert validation and technical assessment of opportunities.</p>
+            </div>
+          </div>
+
+          {/* Vision Statement */}
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6">The Founder Network</h2>
+            <p className="text-xl text-gray-300 leading-relaxed">
+              "Building a startup is a journey best shared. Find your perfect co-founder, build your dream team, and create something amazing together. The right connection can change everything."
+            </p>
+            <p className="text-lg text-gray-400 mt-4">
+              Choose your path: host privately with complete data sovereignty, or connect to our global network with privacy-preserving protocols.
+            </p>
+          </div>
 
           {/* Realm Selection */}
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
@@ -68,25 +175,25 @@ export default function HomePage() {
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-white">Public Realm</CardTitle>
-                <CardDescription className="text-gray-300">Connect with the global startup community</CardDescription>
+                <CardDescription className="text-gray-300">Connect with the founder community</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center space-x-2">
                     <Users className="w-4 h-4 text-blue-400" />
-                    <span>AI Partner Matching</span>
+                    <span>Founder Matching</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Calendar className="w-4 h-4 text-blue-400" />
-                    <span>Event & Meetup Scheduling</span>
+                    <span>Startup Events</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <TrendingUp className="w-4 h-4 text-blue-400" />
-                    <span>Startup Lifecycle Tracking</span>
+                    <span>Market Insights</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Shield className="w-4 h-4 text-blue-400" />
-                    <span>Differential Privacy Sharing</span>
+                    <span>Community</span>
                   </li>
                 </ul>
               </CardContent>
@@ -105,17 +212,17 @@ export default function HomePage() {
                   <Lock className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-white">Private Realm</CardTitle>
-                <CardDescription className="text-gray-300">Manage your startup's internal operations</CardDescription>
+                <CardDescription className="text-gray-300">Secure your founder journey</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center space-x-2">
                     <Zap className="w-4 h-4 text-pink-400" />
-                    <span>HR & Payroll Management</span>
+                    <span>AI Startup Agent</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <TrendingUp className="w-4 h-4 text-pink-400" />
-                    <span>Competition Intelligence</span>
+                    <span>Strategy Portfolio</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Users className="w-4 h-4 text-pink-400" />
@@ -123,7 +230,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-center space-x-2">
                     <Calendar className="w-4 h-4 text-pink-400" />
-                    <span>Partnership Management</span>
+                    <span>Expert Validation</span>
                   </li>
                 </ul>
               </CardContent>
@@ -152,23 +259,23 @@ export default function HomePage() {
       {/* Features Grid */}
       <section className="py-20 px-4 bg-black/20">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">Powered by AI, Built for Founders</h2>
+          <h2 className="text-4xl font-bold text-white text-center mb-12">Why Join mindr.club?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: Sparkles,
-                title: "AI Agent Matching",
-                description: "Smart algorithms connect you with the perfect co-founders and partners",
+                icon: Users,
+                title: "Merit-Based Access",
+                description: "Join based on your skills and contributions, not your background or capital",
               },
               {
                 icon: Shield,
-                title: "Differential Privacy",
-                description: "Share insights while protecting sensitive startup information",
+                title: "Skill Certification",
+                description: "Get your technical and startup skills evaluated and certified",
               },
               {
                 icon: TrendingUp,
-                title: "Lifecycle Management",
-                description: "Track and optimize every stage of your startup journey",
+                title: "Equal Opportunity",
+                description: "Connect with founders regardless of traditional credentials",
               },
             ].map((feature, index) => (
               <Card key={index} className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
