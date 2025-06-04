@@ -326,10 +326,10 @@ export default function PrivateRealmPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between">
                     <span className="text-gray-300">AI Processing</span>
                     <span className="text-green-400">Active</span>
-                  </div>
+                      </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300">Knowledge Base</span>
                     <span className="text-green-400">Synced</span>
@@ -338,32 +338,32 @@ export default function PrivateRealmPage() {
                     <span className="text-gray-300">API Status</span>
                     <span className="text-green-400">Online</span>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                    </div>
+                  </CardContent>
+                </Card>
 
-            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-              <CardHeader>
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <CardHeader>
                 <CardTitle className="text-white">Active Alerts</CardTitle>
-              </CardHeader>
-              <CardContent>
+                </CardHeader>
+                <CardContent>
                 <div className="space-y-3">
-                  {[
+                    {[
                     { message: "New market opportunity detected", time: "2m ago", color: "text-green-400" },
                     { message: "Investor meeting scheduled", time: "15m ago", color: "text-yellow-400" },
                     { message: "Trading strategy update", time: "1h ago", color: "text-blue-400" },
-                  ].map((alert, index) => (
+                    ].map((alert, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <div className={`w-2 h-2 rounded-full ${alert.color}`} />
-                      <div className="flex-1">
-                        <p className="text-white text-sm">{alert.message}</p>
-                        <p className="text-gray-400 text-xs">{alert.time}</p>
+                        <div className="flex-1">
+                          <p className="text-white text-sm">{alert.message}</p>
+                          <p className="text-gray-400 text-xs">{alert.time}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
           </div>
 
           {/* Main Content - Dynamic Based on Active Module */}
@@ -381,7 +381,7 @@ export default function PrivateRealmPage() {
                           ? "bg-white/20"
                           : "hover:bg-white/10"
                       }`}
-                    >
+                      >
                       <div className={`w-5 h-5 bg-gradient-to-r ${phase.color} text-white rounded-full p-1 flex items-center justify-center`}>
                         {phase.icon()}
                       </div>
@@ -390,20 +390,20 @@ export default function PrivateRealmPage() {
                         <Badge className="bg-green-500/20 text-green-400">Active</Badge>
                       )}
                     </button>
-                  ))}
-                </div>
+                    ))}
+                  </div>
 
                 {/* Discovery Phase Content */}
                 {selectedPhase === "discovery" && (
                   <div className="space-y-6">
-                    <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                      <CardHeader>
+                <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                  <CardHeader>
                         <CardTitle className="text-white">Market Analysis</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-4">
-                          {[
-                            {
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      {[
+                        {
                               title: "Industry Trends",
                               insights: [
                                 "AI adoption increasing by 35% YoY",
@@ -411,8 +411,8 @@ export default function PrivateRealmPage() {
                                 "Cybersecurity spending up 25%",
                               ],
                               confidence: 92,
-                            },
-                            {
+                        },
+                        {
                               title: "Competitive Landscape",
                               insights: [
                                 "3 major players dominating market",
@@ -420,8 +420,8 @@ export default function PrivateRealmPage() {
                                 "New regulations affecting market",
                               ],
                               confidence: 88,
-                            },
-                            {
+                        },
+                        {
                               title: "Customer Pain Points",
                               insights: [
                                 "Integration complexity",
@@ -429,7 +429,7 @@ export default function PrivateRealmPage() {
                                 "Security concerns",
                               ],
                               confidence: 95,
-                            },
+                        },
                           ].map((analysis, index) => (
                             <div
                               key={index}
@@ -441,37 +441,37 @@ export default function PrivateRealmPage() {
                               onClick={() => setExpandedCard(expandedCard === analysis.title ? null : analysis.title)}
                             >
                               <div className="flex items-center justify-between">
-                                <div>
+                            <div>
                                   <h3 className="text-white font-medium">{analysis.title}</h3>
                                   <p className="text-gray-300 text-sm">
                                     Confidence: {analysis.confidence}%
                                   </p>
-                                </div>
+                            </div>
                                 <Badge className="bg-blue-500/20 text-blue-400">
                                   {analysis.insights.length} Insights
                                 </Badge>
-                              </div>
+                          </div>
                               {expandedCard === analysis.title && (
                                 <div className="mt-4 space-y-2">
                                   {analysis.insights.map((insight, i) => (
                                     <div key={i} className="flex items-center space-x-2">
                                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
                                       <p className="text-gray-300">{insight}</p>
-                                    </div>
+                          </div>
                                   ))}
                                 </div>
                               )}
-                            </div>
-                          ))}
                         </div>
-                      </CardContent>
-                    </Card>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
 
-                    <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                      <CardHeader>
+                <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                  <CardHeader>
                         <CardTitle className="text-white">Technology Mapping</CardTitle>
-                      </CardHeader>
-                      <CardContent>
+                  </CardHeader>
+                  <CardContent>
                         <div className="grid grid-cols-2 gap-4">
                           {[
                             {
@@ -505,34 +505,34 @@ export default function PrivateRealmPage() {
                                 <Badge className="bg-purple-500/20 text-purple-400">
                                   {tech.maturity}
                                 </Badge>
-                              </div>
+                        </div>
                               <div className="space-y-1">
                                 <div className="flex justify-between text-sm">
                                   <span className="text-gray-300">Adoption</span>
                                   <span className="text-blue-400">{tech.adoption}</span>
-                                </div>
+                        </div>
                                 <div className="flex justify-between text-sm">
                                   <span className="text-gray-300">Impact</span>
                                   <span className="text-green-400">{tech.impact}</span>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
+                      </div>
                         </div>
-                      </CardContent>
-                    </Card>
-                  </div>
+                        </div>
+                          ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
                 )}
 
                 {/* Validation Phase Content */}
                 {selectedPhase === "validation" && (
-                  <div className="space-y-6">
-                    <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                      <CardHeader>
+              <div className="space-y-6">
+                <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                  <CardHeader>
                         <CardTitle className="text-white">Expert Validation</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-4">
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
                           {[
                             {
                               expert: "Dr. Sarah Chen",
@@ -561,11 +561,11 @@ export default function PrivateRealmPage() {
                                       {validation.expert[0]}
                                     </AvatarFallback>
                                   </Avatar>
-                                  <div>
+                      <div>
                                     <p className="text-white font-medium">{validation.expert}</p>
                                     <p className="text-gray-300 text-sm">{validation.role}</p>
-                                  </div>
-                                </div>
+                        </div>
+                      </div>
                                 <Badge
                                   className={`${
                                     validation.status === "Approved"
@@ -577,26 +577,26 @@ export default function PrivateRealmPage() {
                                 >
                                   {validation.status}
                                 </Badge>
-                              </div>
-                              <p className="text-gray-300 text-sm mt-2">{validation.feedback}</p>
-                            </div>
-                          ))}
                         </div>
-                      </CardContent>
-                    </Card>
+                              <p className="text-gray-300 text-sm mt-2">{validation.feedback}</p>
+                      </div>
+                          ))}
+                    </div>
+                  </CardContent>
+                </Card>
                   </div>
                 )}
 
                 {/* Prototype Phase Content */}
                 {selectedPhase === "prototype" && (
                   <div className="space-y-6">
-                    <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                      <CardHeader>
+                <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                  <CardHeader>
                         <CardTitle className="text-white">Prototype Development</CardTitle>
-                      </CardHeader>
-                      <CardContent>
+                  </CardHeader>
+                  <CardContent>
                         <div className="space-y-4">
-                          {[
+                      {[
                             {
                               component: "User Interface",
                               progress: 65,
@@ -622,7 +622,7 @@ export default function PrivateRealmPage() {
                                 <Badge className="bg-blue-500/20 text-blue-400">
                                   {prototype.status}
                                 </Badge>
-                              </div>
+                          </div>
                               <Progress value={prototype.progress} className="h-2 mb-3" />
                               <div className="space-y-1">
                                 {prototype.tasks.map((task, i) => (
@@ -632,41 +632,41 @@ export default function PrivateRealmPage() {
                                   </div>
                                 ))}
                               </div>
-                            </div>
-                          ))}
                         </div>
-                      </CardContent>
-                    </Card>
-                  </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
                 )}
 
                 {/* Launch Phase Content */}
                 {selectedPhase === "launch" && (
                   <div className="space-y-6">
-                    <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                      <CardHeader>
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <CardHeader>
                         <CardTitle className="text-white">Launch Preparation</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-4">
-                          {[
-                            {
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    {[
+                      {
                               task: "Marketing Strategy",
                               status: "Planning",
                               dependencies: ["Brand Guidelines", "Content Calendar"],
-                            },
-                            {
+                      },
+                      {
                               task: "Sales Pipeline",
                               status: "Setup",
                               dependencies: ["CRM Integration", "Lead Scoring"],
-                            },
-                            {
+                      },
+                      {
                               task: "Infrastructure",
                               status: "In Progress",
                               dependencies: ["Cloud Setup", "Monitoring", "Backup"],
-                            },
+                      },
                           ].map((launch, index) => (
-                            <div key={index} className="p-4 bg-white/5 rounded-lg">
+                      <div key={index} className="p-4 bg-white/5 rounded-lg">
                               <div className="flex items-center justify-between">
                                 <div>
                                   <h4 className="text-white font-medium">{launch.task}</h4>
@@ -674,8 +674,8 @@ export default function PrivateRealmPage() {
                                 </div>
                                 <Badge className="bg-orange-500/20 text-orange-400">
                                   {launch.dependencies.length} Dependencies
-                                </Badge>
-                              </div>
+                          </Badge>
+                        </div>
                               <div className="mt-2 space-y-1">
                                 {launch.dependencies.map((dep, i) => (
                                   <div key={i} className="flex items-center space-x-2">
@@ -684,11 +684,11 @@ export default function PrivateRealmPage() {
                                   </div>
                                 ))}
                               </div>
-                            </div>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
                   </div>
                 )}
               </div>
@@ -696,11 +696,11 @@ export default function PrivateRealmPage() {
 
             {activeModule === "investor-relations" && (
               <div className="space-y-6">
-                <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                  <CardHeader>
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <CardHeader>
                     <CardTitle className="text-white">Investor Dashboard</CardTitle>
-                  </CardHeader>
-                  <CardContent>
+                </CardHeader>
+                <CardContent>
                     <div className="space-y-4">
                       {[
                         {
@@ -741,11 +741,11 @@ export default function PrivateRealmPage() {
                                   {investor.investor[0]}
                                 </AvatarFallback>
                               </Avatar>
-                              <div>
+                      <div>
                                 <p className="text-white font-medium">{investor.investor}</p>
                                 <p className="text-gray-300 text-sm">Last contact: {investor.lastContact}</p>
-                              </div>
-                            </div>
+                        </div>
+                      </div>
                             <Badge
                               className={`${
                                 investor.status === "Active"
@@ -760,11 +760,11 @@ export default function PrivateRealmPage() {
                           </div>
                           {expandedCard === investor.investor && (
                             <div className="mt-4 space-y-3">
-                              <div>
+                      <div>
                                 <p className="text-gray-300 text-sm">Next Meeting</p>
                                 <p className="text-white">{investor.nextMeeting}</p>
-                              </div>
-                              <div>
+                        </div>
+                      <div>
                                 <p className="text-gray-300 text-sm">Areas of Interest</p>
                                 <div className="flex flex-wrap gap-2 mt-1">
                                   {investor.interests.map((interest, i) => (
@@ -772,8 +772,8 @@ export default function PrivateRealmPage() {
                                       {interest}
                                     </Badge>
                                   ))}
-                                </div>
-                              </div>
+                        </div>
+                      </div>
                               <div className="flex space-x-2">
                                 <Button className="bg-blue-500 hover:bg-blue-600">
                                   Schedule Meeting
@@ -781,15 +781,15 @@ export default function PrivateRealmPage() {
                                 <Button className="border border-white/20 hover:bg-white/10">
                                   View History
                                 </Button>
-                              </div>
+                    </div>
                             </div>
                           )}
                         </div>
                       ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
             )}
 
             {activeModule === "trading-portfolio" && (
@@ -800,15 +800,15 @@ export default function PrivateRealmPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
-                      {[
-                        {
+              {[
+                {
                           name: "Momentum Pro X",
                           developer: "Trading Systems Lab",
                           return: "32%",
                           drawdown: "12%",
                           timeframe: "4H",
                           pairs: "EUR/USD, GBP/USD",
-                          status: "Active",
+                  status: "Active",
                         },
                         {
                           name: "Forex Scalper Elite",
@@ -826,8 +826,8 @@ export default function PrivateRealmPage() {
                           drawdown: "14%",
                           timeframe: "1D",
                           pairs: "All Major Pairs",
-                          status: "Active",
-                        },
+                  status: "Active",
+                },
                       ].map((strategy, index) => (
                         <div
                           key={index}
@@ -856,16 +856,16 @@ export default function PrivateRealmPage() {
                               </Badge>
                               <Badge className="bg-red-500/20 text-red-400">
                                 DD: {strategy.drawdown}
-                              </Badge>
-                            </div>
-                          </div>
+                        </Badge>
+                      </div>
+                      </div>
                           {expandedCard === strategy.name && (
                             <div className="mt-4 space-y-3">
                               <div className="grid grid-cols-2 gap-4">
                                 <div>
                                   <p className="text-gray-300 text-sm">Timeframe</p>
                                   <p className="text-white">{strategy.timeframe}</p>
-                                </div>
+                      </div>
                                 <div>
                                   <p className="text-gray-300 text-sm">Pairs</p>
                                   <p className="text-white">{strategy.pairs}</p>
@@ -886,19 +886,19 @@ export default function PrivateRealmPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </div>
+            </div>
             )}
 
             {activeModule === "knowledge-base" && (
               <div className="space-y-6">
-                <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                  <CardHeader>
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <CardHeader>
                     <CardTitle className="text-white">Knowledge Base</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      {[
-                        {
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    {[
+                      {
                           category: "Market Research",
                           documents: 24,
                           lastUpdate: "2 hours ago",
@@ -913,9 +913,9 @@ export default function PrivateRealmPage() {
                         {
                           category: "Business Strategy",
                           documents: 15,
-                          lastUpdate: "3 days ago",
+                        lastUpdate: "3 days ago",
                           topics: ["Go-to-Market", "Pricing", "Partnerships"],
-                        },
+                      },
                       ].map((category, index) => (
                         <div
                           key={index}
@@ -935,8 +935,8 @@ export default function PrivateRealmPage() {
                             </div>
                             <Badge className="bg-blue-500/20 text-blue-400">
                               {category.topics.length} Topics
-                            </Badge>
-                          </div>
+                          </Badge>
+                        </div>
                           {expandedCard === category.category && (
                             <div className="mt-4 space-y-3">
                               <div className="flex flex-wrap gap-2">
@@ -945,7 +945,7 @@ export default function PrivateRealmPage() {
                                     {topic}
                                   </Badge>
                                 ))}
-                              </div>
+                          </div>
                               <div className="flex space-x-2">
                                 <Button className="bg-blue-500 hover:bg-blue-600">
                                   Browse Documents
@@ -953,25 +953,25 @@ export default function PrivateRealmPage() {
                                 <Button className="border border-white/20 hover:bg-white/10">
                                   Add Document
                                 </Button>
-                              </div>
-                            </div>
-                          )}
+                          </div>
                         </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                          )}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
               </div>
             )}
 
             {activeModule === "settings" && (
               <div className="space-y-6">
-                <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                  <CardHeader>
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <CardHeader>
                     <CardTitle className="text-white">System Settings</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
                       {[
                         { title: "Profile Settings", icon: Users },
                         { title: "Security", icon: Shield },
@@ -989,22 +989,22 @@ export default function PrivateRealmPage() {
                           <ChevronRight className="w-5 h-5 text-gray-400" />
                         </div>
                       ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
             )}
           </div>
 
           {/* Right Sidebar - Quick Actions */}
           <div className="col-span-3 space-y-6">
-            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-              <CardHeader>
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <CardHeader>
                 <CardTitle className="text-white">Quick Actions</CardTitle>
-              </CardHeader>
-              <CardContent>
+                </CardHeader>
+                <CardContent>
                 <div className="grid grid-cols-2 gap-4">
-                  {[
+                    {[
                     { icon: Brain, label: "AI Analysis" },
                     { icon: BarChart3, label: "Reports" },
                     { icon: Eye, label: "Monitor" },
@@ -1017,18 +1017,18 @@ export default function PrivateRealmPage() {
                       <action.icon className="w-6 h-6 text-pink-400" />
                       <span className="text-white text-sm">{action.label}</span>
                     </Button>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-              <CardHeader>
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <CardHeader>
                 <CardTitle className="text-white">System Metrics</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {[
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    {[
                     { metric: "AI Processing", value: "98%", color: "text-green-400" },
                     { metric: "API Response", value: "45ms", color: "text-blue-400" },
                     { metric: "Storage Usage", value: "72%", color: "text-yellow-400" },
@@ -1036,12 +1036,12 @@ export default function PrivateRealmPage() {
                     <div key={index} className="flex items-center justify-between">
                       <span className="text-white">{metric.metric}</span>
                       <span className={metric.color}>{metric.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
         </div>
       </div>
     </div>
